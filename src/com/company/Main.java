@@ -32,10 +32,10 @@ public class Main {
         //searchResult.sendKeys(Keys.ENTER);
         searchResult.click();
 
-        WebElement selectCheckInDate = driver.findElement(By.cssSelector("#BODY_BLOCK_JQUERY_REFLOW > div.cBtAm.Za.f.e > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div.kAgrN > div > div.fZVmW.q.c > div:nth-child(2) > div.nZEkx.notranslate > div:nth-child(1) > div:nth-child(3)"));
+        WebElement selectCheckInDate = driver.findElement(By.cssSelector("#BODY_BLOCK_JQUERY_REFLOW > div.cBtAm.Za.f.e > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div.kAgrN > div > div.fZVmW.q.c > div:nth-child(2) > div.nZEkx.notranslate > div:nth-child(2) > div:nth-child(4)"));
         selectCheckInDate.click();
 
-        WebElement selectCheckOutDate = driver.findElement(By.cssSelector("#BODY_BLOCK_JQUERY_REFLOW > div.cBtAm.Za.f.e > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div.eLjPa > div > div.fZVmW.q.c > div:nth-child(1) > div.nZEkx.notranslate > div:nth-child(2) > div:nth-child(5)"));
+        WebElement selectCheckOutDate = driver.findElement(By.cssSelector("#BODY_BLOCK_JQUERY_REFLOW > div.cBtAm.Za.f.e > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div.eLjPa > div > div.fZVmW.q.c > div:nth-child(1) > div.nZEkx.notranslate > div:nth-child(3) > div.fgeHy.Vt.Z1.low"));
         selectCheckOutDate.click();
 
 
@@ -57,10 +57,10 @@ public class Main {
 
         Thread.sleep(5000);
 
-        WebElement checkBox = driver.findElement(By.cssSelector("#component_13 > div > div.dSlNe.bhcPI > div:nth-child(6) > div.czbRE > div:nth-child(4) > div > label > div > span.eLkFw > span"));
-        checkBox.click();
+        //WebElement checkBox = driver.findElement(By.cssSelector("#component_13 > div > div.dSlNe.bhcPI > div:nth-child(6) > div.czbRE > div:nth-child(4) > div > label > div > span.eLkFw > span"));
+        //checkBox.click();
 
-        WebElement getTitle = driver.findElement(By.cssSelector("#property_264882"));
+        WebElement getTitle = driver.findElement(By.cssSelector("#property_490927"));
         getTitle.getText();
         System.out.println(getTitle.getText());
 
