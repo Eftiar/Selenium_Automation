@@ -1,29 +1,30 @@
 package test;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.TripSearchPage;
 import pages.TripPage;
 
 import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 
 public class TripSearchAutomation {
+
     static WebDriver driver = null;
 
-    TripSearchPage objTripSearch;
-
-    static TripPage objPage;
+    @BeforeTest
+    public void Setup() throws InterruptedException {
+        driver = new FirefoxDriver();
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
 
     @Test
     public void TripSearch() throws InterruptedException {
-        FirefoxDriver driver = new FirefoxDriver();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.tripadvisor.com/");
         TripPage.button(driver).click();
         Thread.sleep(5000);
@@ -49,13 +50,11 @@ public class TripSearchAutomation {
 
     }
 
-
-   /* @Test
-    public static void tripSearch() {
-        TripPage.button(driver).click();
-
+    @AfterTest
+    public void tearDown(){
+        driver.close();
+        driver.quit();
+        System.out.println("Test run successfully");
     }
-
-    */
 
 }

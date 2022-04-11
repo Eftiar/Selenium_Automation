@@ -59,7 +59,7 @@ public class TripPage {
     }
 
     public static WebElement getTitle(WebDriver driver){
-        element = driver.findElement(By.cssSelector("#property_1157859"));
+        element = driver.findElement(By.cssSelector("//*[@id=\"property_490927\"]"));
         return element;
     }
 
