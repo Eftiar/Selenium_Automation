@@ -1,4 +1,4 @@
-package test;
+package test.Java;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
